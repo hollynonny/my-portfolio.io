@@ -1,6 +1,9 @@
 nav {
     background-color: #333;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
 }
 
@@ -9,7 +12,16 @@ nav ul{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+nav ul.conts {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul li{
@@ -23,6 +35,18 @@ nav ul li a{
     transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover{
+    background-color: #484545;
+}
+
+.dropbtn {
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 1px 20px;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -31,11 +55,21 @@ nav ul li a{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #333;
     min-width: 160px;
     box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    padding: 5px;
     z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #484545;
 }
 
 .dropdown:hover .dropdown-content {

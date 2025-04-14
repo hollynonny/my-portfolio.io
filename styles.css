@@ -12,6 +12,7 @@ button {
 }
 
 nav {
+    font-size: 16px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -73,7 +74,7 @@ nav ul li a:hover{
 .dropdown-content {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     transform: translateY(-5px);
     position: absolute;
     background-color: #464444;
@@ -101,6 +102,12 @@ nav ul li a:hover{
     visibility: visible;
     border: none;
     border-radius: 8px;
+}
+
+.dropdown:not(:hover) .dropdown-content {
+    opacity: 0;
+    transform: translateY(-5px);
+    visibility: hidden;
 }
 
 nav::after {

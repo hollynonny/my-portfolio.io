@@ -153,3 +153,8 @@ footer{
     align-items: center;
     z-index: 1000;
 }   
+
+footer p {
+    margin: 0;
+    padding: 15px 50px;
+}
